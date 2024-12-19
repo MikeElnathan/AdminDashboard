@@ -14,3 +14,32 @@ li > a{
 div{
     outline: 1px solid red;
 }
+
+#navbar{
+    background-color: #003566;
+}
+#logo{
+    display: flex;
+    color: white;
+}
+#home > ul > li > a,
+#settings > ul > li > a
+{
+    color: white;
+}
+#wrap1, #wrap2{
+    display: flex;
+    width: 100%;
+}
+#wrap3{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+#profilename{
+    display: flex;
+}
+#projectpost{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
