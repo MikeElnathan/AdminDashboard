@@ -2,7 +2,7 @@ body{
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    font-family: "Open Sans", 'Times New Roman', Times, serif;
 }
 ul{
     list-style: none;
@@ -11,12 +11,18 @@ ul{
 li > a{
     text-decoration: none;
 }
-div{
-    outline: 1px solid red;
+button{
+    all: unset;
+    outline: 1px solid black;/*debug*/
 }
 
 #navbar{
+    position: fixed;
+    height: 100%;
+    width: 15rem;
     background-color: #003566;
+    z-index: 100;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
 }
 #logo{
     display: flex;
@@ -27,9 +33,17 @@ div{
 {
     color: white;
 }
+.content-wrap{
+    margin-left: 15rem;
+}
+#banner{
+    margin-bottom: 2.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 #wrap1, #wrap2{
     display: flex;
-    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
 }
 #wrap3{
     display: grid;
@@ -37,9 +51,101 @@ div{
 }
 #profilename{
     display: flex;
+    gap: 0.5rem;
+}
+#profilename > svg{
+    align-self: center;
+}
+.profile{
+    background-image: url(https://cdn.prod.website-files.com/5d7e8885cad5174a2fcb98d7/64933f9d63c62651c3ba1125_5f56dd996a7294efc1974174_noodle-and-bun-tiktok.jpeg);
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.profile#small{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+}
+#greeting{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.profile#big{
+ width: 6rem;
+ height: 6rem;
+ grid-row: 1 / 3;
+}
+#greeting > p:nth-child(2){
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    align-self: end;
+}
+#greeting > p:nth-child(3){
+    padding-top: 0;
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 1rem;
+}
+#button{
+    display: flex;
+    align-self: end;
+    gap: 1rem;
+}
+#button > button{
+    width: 5rem;
+    text-align: center;
+    border-radius: 10px;
 }
 #projectpost{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+.post{
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.post > h3{
+    font-size: 1rem;
+}
+.post > p{
+    font-size: 0.8rem;
+}
+#bulletin{
+    margin: 0;
+    padding: 0 0.5rem 0 0.5rem;
+}
+#anouncement{
+    border-radius: 10px;
+    margin: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+}
+#anouncement > h4{
+    font-size: 0.8rem;
+    margin: 0;
+    padding-top: 0.5rem;
+}
+#anouncement > p{
+    font-size: 0.7rem;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+#trending{
+    border-radius: 10px;
+    margin: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    outline: 1px solid rgba(0, 0, 0, 0.2);
 }
